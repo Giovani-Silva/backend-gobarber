@@ -23,15 +23,15 @@ appointmentsRouter.post('/', (request, response) => {
       .json({ message: 'This appointment is already booked' });
   }
 
-  const appointment = {
-    id: uuid(),
-    provider,
-    date: parsedDate,
-  };
+  const appointment = new Appointment(provider, parsedDate);
 
   appointments.push(appointment);
 
   return response.json(appointment);
+});
+
+appointmentsRouter.get('/', (request, response) => {
+  return response.json(appointments);
 });
 
 export default appointmentsRouter;
