@@ -19,8 +19,8 @@ class AppointmentsRepository {
     return findAppointment || null;
   }
 
-  public create(provider: string, date: Date): Appointment {
-    const appointment = new Appointment(provider, date);
+  public create({ provider, date }: Omit<Appointment, 'id'>): Appointment {
+    const appointment = new Appointment({ provider, date });
 
     this.appointments.push(appointment);
 
