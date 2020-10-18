@@ -27,7 +27,7 @@ appointmentsRouter.post('/', (request, response) => {
 });
 
 appointmentsRouter.get('/', (request, response) => {
-  return response.json(appointments);
+  return response.json(appointmentsRepository.all());
 });
 
 export default appointmentsRouter;
