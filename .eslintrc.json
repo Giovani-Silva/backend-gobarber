@@ -26,6 +26,10 @@
         "endOfLine": "auto"
       }
     ],
+    "@typescript-eslint/interface-name-prefix": [
+      "error",
+      { "prefixWithI": "always" }
+    ],
     "class-methods-use-this": "off",
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": [
