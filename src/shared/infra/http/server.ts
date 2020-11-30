@@ -29,5 +29,5 @@ app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
 
 app.listen(3333, () => {
   // eslint-disable-next-line no-console
-  console.log('🚀 Back-end GoBarber started');
+  console.log('🚀 Back-end GoBarber started 3333');
 });
